@@ -1,0 +1,50 @@
+USED CARS
+----------------------------------------------------------------------------------------------------------------------
+id                          |  INT          |  NOTNULL      |  UNSIGNED  |  UNIQUE  |  PRIMARY KEY  |  AUTOINCREMENT  |
+----------------------------------------------------------------------------------------------------------------------
+SPECIFICHE MODELLO                                                       |
+--------------------------------------------------------------------------
+marca                       |  VARCHAR(30)  |  NOTNULL      |            |
+modello                     |  VARCHAR(30)  |  NOTNULL      |            |
+versione                    |  VARCHAR(30)  |  NULL         |            |
+anno                        |  YEAR         |  NOTNULL      |  UNSIGNED  |
+tipo-carrozzeria            |  VARCHAR(20)  |  NULL         |            |
+alimentazione               |  VARCHAR(30)  |  NOTNULL      |            |
+classe-emissioni            |  TINYINT      |  NULL         |  UNSIGNED  |
+cilindrata-cc               |  SMALLINT     |  NULL         |  UNSIGNED  |
+consumo                     |  FLOAT(3, 1)  |  NULL         |  UNSIGNED  |
+cambio                      |  VARCHAR(20)  |  NOTNULL      |            |
+foto                        |  TEXT(url)    |  NULL         |            |  DEFAULT(""/img/default.jpg);
+--------------------------------------------------------------------------
+EQUIPAGGIAMENTO                                                          |
+--------------------------------------------------------------------------
+n-porte                     |  TINYINT      |  NOTNULL      |  UNSIGNED  |
+n-posti                     |  TINYINT      |  NOTNULL      |  UNSIGNED  |
+isofix                      |  TINYINT      |  NULL         |  UNSIGNED  |
+--------------------------------------------------------------------------
+OPTIONAL                                                                 |
+--------------------------------------------------------------------------
+climatizzatore              |  TINYINT      |  NULL         |  UNSIGNED  |
+radio                       |  TINYINT      |  NULL         |  UNSIGNED  |
+park-assist                 |  TINYINT      |  NULL         |  UNSIGNED  |
+sedili riscaldati           |  TINYINT      |  NULL         |  UNSIGNED  |
+--------------------------------------------------------------------------
+DETTAGLI ESTETICI                                                        |
+--------------------------------------------------------------------------
+colore-esterni              |  VARCHAR(20)  |  NOTNULL      |            |
+materiale-tapezzeria        |  VARCHAR(25)  |  NULL         |            |
+colore-interni              |  VARCHAR(20)  |  NULL         |            |
+--------------------------------------------------------------------------
+DETTAGLI VENDITA                                                         |
+--------------------------------------------------------------------------
+chilometraggio              |  INT          |  NOTNULL      |  UNSIGNED  |
+precedenti-proprietari      |  TINYINT      |  NULL         |  UNSIGNED  |
+non-fumatori                |  TINYINT      |  NULL         |  UNSIGNED  |
+incidentato                 |  TINYINT      |  NULL         |  UNSIGNED  |
+condizioni                  |  VARCHAR(30)  |  NOTNULL      |            |
+descrizione                 |  TEXT         |  NULL         |            |
+posizione                   |  VARCHAR(60)  |  NOTNULL      |            |
+tipo-venditore              |  VARCHAR(15)  |  NOTNULL      |            |
+garanzia-mesi               |  TINYINT      |  NULL         |  UNSIGNED  |  DEFAULT(0)
+prezzo                      |  DECIMAL(5, 2)|  NOTNULL      |  UNSIGNED  |
+--------------------------------------------------------------------------
